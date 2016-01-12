@@ -1,0 +1,521 @@
+@import "bourbon/bourbon"; // http://bourbon.io/
+
+@import '../partials/layout'; // responsive grid and media queries
+
+// color palette - these colors will be the color swatches of the Colors section
+
+$color-1: #2a2d34; // Dark grey
+$color-2: #3a99d9; // Blue
+$color-3: #2abb9c; // Green
+$color-4: #e6e6e6; // Light grey
+$color-5: #ffffff; // White
+
+// additional colors
+
+$primary-colour: $color-2;
+$text-color: $color-1;
+$success: $color-3; // green
+$alert: #d93d3a;  // red
+
+// fonts
+
+$primary-font: 'Hind', 'Open Sans', sans-serif;
+
+/* --------------------------------
+
+xBackground
+
+-------------------------------- */
+
+body {
+	/* this is the page background */
+	background-color: $color-5;
+}
+
+/* --------------------------------
+
+xPatterns
+
+-------------------------------- */
+
+.box {
+	/* this is the container of various design elements - i.e. the 2 logo of the branding section */
+	border: 1px solid $color-4;
+	border-radius: 3px;
+	background: $color-5;
+	box-shadow: 0 1px 1px rgba(#000, .05);
+	padding: 6px;
+}
+
+/* --------------------------------
+
+xNavigation
+
+-------------------------------- */
+
+header {
+	background-color: $color-1;
+}
+
+.logo {
+	/* logo box style */
+	background-color: $color-1;
+	width: 120px;
+
+	@include MQ(M) {
+		width: 180px;
+	}
+}
+
+.main-nav {
+	/* main navigation background color - full screen on small devices */
+	background: $primary-colour;
+
+	li a {
+		color: $color-5;
+		border-color: lighten($primary-colour, 5%);
+	}
+
+	@include MQ(M) {
+		li a {
+			color: lighten($primary-colour, 40%);
+
+			&.selected {
+				color: $color-5;
+				box-shadow: 0 3px 0 $color-5;
+			}
+
+			.no-touch &:hover {
+				color: $color-5;
+			}
+		}
+	}
+}
+
+.nav-trigger span {
+	/* hamburger menu */
+	background-color: $color-5;
+
+	&::before,
+	&::after {
+		/* upper and lower lines */
+		background-color: $color-5;
+	}
+}
+
+.nav-is-visible .nav-trigger span {
+	/* hide line in the center on mobile when nav is visible */
+	background-color: rgba($color-5, 0);
+
+	&::before, &::after {
+		/* preserve visibility of upper and lower lines - close icon */
+		background-color: rgba($color-5, 1);
+	}
+}
+
+.download {
+	/* download button top-right visible on big devices */
+	background-color: $color-1;
+
+	.no-touch &:hover {
+		background-color: lighten($color-1, 10%);
+	}
+
+	span {
+		/* tooltip */
+		background: $color-5;
+		color: $color-1;
+
+		&::before {
+			/* right arrow color */
+			border-color: $color-5;
+		}
+	}
+}
+
+/* --------------------------------
+
+xPage title
+
+-------------------------------- */
+
+main > h1 {
+	color: $text-color;
+
+	@include MQ(L) {
+		/* title goes into the header on big devices */
+		color: $color-5;
+	}
+}
+
+/* --------------------------------
+
+xTypography
+
+-------------------------------- */
+
+h1, h2 {
+	color: $text-color;
+}
+
+h1 {
+	font-size: 2.4rem;
+	font-weight: 600;
+	line-height: 1.2;
+	margin: 0 0 .4em;
+
+	@include MQ(S) {
+		font-size: 3.2rem;
+	}
+
+	@include MQ(M) {
+		font-size: 4rem;
+	}
+}
+
+h2 {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 1em 0;
+
+	@include MQ(S) {
+		font-size: 1.8rem;
+		margin: 1em 0 1.4em;
+	}
+}
+
+section > h2::before {
+	/* number before each section title */
+	color: darken($color-4, 15%);
+}
+
+p {
+	font-size: 1.4rem;
+	line-height: 1.4;
+	color: $text-color;
+
+	a {
+		color: $primary-colour;
+		text-decoration: underline;
+	}
+
+	@include MQ(S) {
+		font-size: 1.6rem;
+		line-height: 1.6;
+	}
+}
+
+/* --------------------------------
+
+xButtons
+
+-------------------------------- */
+
+.btn {
+	border: none;
+	box-shadow: none;
+	border-radius: .2em;
+	font: {
+		size: 1.4rem;
+	}
+	color: $color-5;
+	padding: .6em 2.2em;
+	cursor: pointer;
+	background: $primary-colour;
+
+	&:focus {
+		outline: none;
+	}
+
+	.no-touch &:hover {
+		background: lighten($primary-colour, 5%);
+	}
+
+	&.btn-secondary {
+		background: $color-1;
+
+		.no-touch &:hover {
+			background: lighten($color-1, 5%);
+		}
+	}
+
+	&.btn-alert {
+		background: $alert;
+
+		.no-touch &:hover {
+			background: lighten($alert, 5%);
+		}
+	}
+
+	&.btn-outline {
+		color: $primary-colour;
+		background: transparent;
+		box-shadow: inset 0 0 0 1px $primary-colour;
+
+		.no-touch &:hover {
+			color: $color-5;
+			background: $primary-colour;
+		}
+	}
+
+	@include MQ(S) {
+		font-size: 1.6rem;
+	}
+}
+
+.buttons .box:nth-of-type(2) span {
+	/* CSS class name color */
+	color: $primary-colour;
+}
+
+/* --------------------------------
+
+xIcons
+
+-------------------------------- */
+
+.icons li {
+	/* icons size */
+	width: 32px;
+	height: 32px;
+}
+
+/* --------------------------------
+
+xForm
+
+-------------------------------- */
+
+input[type=text], select {
+	border: 1px solid $color-4;
+	border-radius: .25em;
+	background: $color-5;
+	box-sizing: border-box;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+input[type=text] {
+	padding: .6em 1em .4em 1em;
+	box-shadow: inset 1px 1px rgba(#000, .03);
+	background-repeat: no-repeat;
+
+	&.alert {
+		border-color: $alert;
+		box-shadow: 0 0 6px rgba($alert, .2);
+	}
+
+	&:focus {
+		border-color: $primary-colour;
+		box-shadow: 0 0 6px rgba($primary-colour, .2);
+	}
+
+	&[required] {
+		background: url("../assets/form/icon-required.svg") no-repeat top right;
+	}
+
+	&.success {
+		background: url("../assets/form/icon-success.svg") no-repeat top right;
+	}
+
+	&.icon {
+		text-indent: 2em;
+
+		@mixin icon($image) {
+			background-image: url($image);
+			background-position: .75em center;
+			background-size: 24px auto;
+
+			&[required] {
+				background-image: url($image), url('../assets/form/icon-required.svg');
+				background-position: .75em center, right top;
+				background-size: 24px auto, auto;
+			}
+		}
+
+		&.user {
+			@include icon("../assets/form/icon-user.svg");
+		}
+	}
+}
+
+
+input[type=radio],
+input[type=checkbox] {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+}
+
+.radio-label,
+.checkbox-label {
+	padding-left: 24px;
+	@include user-select(none);
+
+	&::before,
+	&::after {
+		/* custom radio and check boxes */
+		content: '';
+		display: block;
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		top: 50%;
+		@include transform(translateY(-50%));
+	}
+
+	&::before {
+		left: 0;
+		border: 1px solid $color-4;
+		box-shadow: inset 1px 1px rgba(#000, .03);
+	}
+
+	&::after {
+		left: 0;
+		background: url('../assets/form/icon-check.svg') no-repeat center center;
+		display: none;
+	}
+}
+
+.radio-label {
+	&::after {
+		background-image: url('../assets/form/icon-radio.svg');
+	}
+
+	&::before {
+		border-radius: 50%;
+	}
+}
+
+.checkbox-label::before {
+	border-radius: 3px;
+}
+
+input[type=radio]:checked + label::before,
+input[type=checkbox]:checked + label::before {
+	background-color: $primary-colour;
+	border: none;
+	box-shadow: none;
+}
+
+input[type=radio]:checked + label::after,
+input[type=checkbox]:checked + label::after {
+	display: block;
+}
+
+.select::after {
+	/* switcher arrow for select element */
+	content: '';
+	position: absolute;
+	z-index: 1;
+	right: 14px;
+	top: 50%;
+	@include transform(translateY(-45%));
+	display: block;
+	width: 12px;
+	height: 12px;
+	background: url('../assets/form/icon-select.svg') no-repeat center center;
+	pointer-events: none;
+}
+
+select {
+	position: relative;
+	padding: .6em 2em .4em 1em;
+	cursor: pointer;
+	@include appearance(none);
+}
+
+
+/* --------------------------------
+
+Tooltips
+
+-------------------------------- */
+
+// Mixins
+
+@mixin tooltip($background-color: white,
+               $arrow-base: 2em,
+               $arrow-length: 1em,
+               $border-width: 0,
+               $border-color: false) {
+
+  position: absolute;
+  box-sizing: border-box;
+  margin-bottom: $arrow-length;
+  background-color: $background-color;
+  cursor: default;
+  visibility: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%; left: 50%;
+    width: 0; height: 0;
+    border-top: ($arrow-length - $border-width) solid $background-color;
+    border-left: ($arrow-base / 2 - $border-width) solid transparent;
+    border-right: ($arrow-base / 2 - $border-width) solid transparent;
+    margin-left: ($border-width - $arrow-base / 2);
+  }
+
+  @if $border-width {
+    border: $border-width solid $border-color;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 100%; left: 50%;
+      width: 0; height: 0;
+      border-top: $arrow-length solid $border-color;
+      border-left: ($arrow-base / 2) solid transparent;
+      border-right: ($arrow-base / 2) solid transparent;
+      margin-left: ($arrow-base / -2);
+    }
+  }
+}
+
+// Animations
+
+@include keyframes(slide-up) {
+  0% {
+    opacity: 0;
+    @include transform(translateY(1em));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateY(0));
+  }
+}
+
+
+.tooltip-attached {
+  position: relative;
+	cursor: pointer;
+
+  &:hover {
+    .tooltip {
+      visibility: visible;
+      @include animation(slide-up .3s);
+    }
+  }
+}
+
+.tooltip {
+  left: 50%;
+  bottom: 100%; // on top
+  width: 12em;
+  margin-left: -6em; // center the tooltip
+  padding: .5em .75em;
+  box-shadow: 0 .05em .15em rgba(black, .1);
+  @include tooltip($color-1, 1em, .5em);
+  color: #fff;
+}
+
+
+
+@import '../partials/basic-style';
