@@ -556,6 +556,37 @@ Labels
 
 /* --------------------------------
 
+Breadcrumbs
+
+-------------------------------- */
+.breadcrumbs {
+  list-style: none; }
+  .breadcrumbs::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .breadcrumbs li {
+    float: left;
+    color: #2a2d34;
+    font-size: 13px;
+    cursor: default;
+    text-transform: uppercase; }
+    .breadcrumbs li:not(:last-child)::after {
+      color: #e6e6e6;
+      content: "/";
+      margin: 0 0.75em;
+      position: relative;
+      top: 1px;
+      opacity: 1; }
+  .breadcrumbs a {
+    color: #3a99d9; }
+    .breadcrumbs a:hover {
+      text-decoration: underline; }
+  .breadcrumbs .disabled {
+    color: #e6e6e6; }
+
+/* --------------------------------
+
 xBasic style
 
 -------------------------------- */
@@ -1036,5 +1067,8 @@ section {
 
 .label {
   margin: 1em 0.5em 1em 1em; }
+
+.breadcrumbs {
+  margin: 1em; }
 
 /*# sourceMappingURL=style-guide.css.map */
