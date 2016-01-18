@@ -535,6 +535,27 @@ Pagination
 
 /* --------------------------------
 
+Labels
+
+-------------------------------- */
+.label {
+  display: inline-block;
+  padding: 0.33333em 0.5em;
+  font-size: 0.8em;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: default;
+  border-radius: 0;
+  background: #3a99d9;
+  color: #fff; }
+  .label.secondary {
+    background-color: #2a2d34; }
+  .label.alert {
+    background-color: #d93d3a; }
+
+/* --------------------------------
+
 xBasic style
 
 -------------------------------- */
@@ -1012,5 +1033,8 @@ section {
 
 .no-csstransitions .select::after {
   display: none; }
+
+.label {
+  margin: 1em 0.5em 1em 1em; }
 
 /*# sourceMappingURL=style-guide.css.map */
