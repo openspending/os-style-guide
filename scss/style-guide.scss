@@ -320,6 +320,11 @@ input[type=text] {
 		background: url("../assets/form/icon-success.svg") no-repeat top right;
 	}
 
+	&[disabled] {
+		opacity: 0.8;
+		background-color: lighten($color-4, 8%);
+	}
+
 	&.icon {
 		text-indent: 2em;
 

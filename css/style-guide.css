@@ -213,6 +213,9 @@ input[type=text] {
     background: url("../assets/form/icon-required.svg") no-repeat top right; }
   input[type=text].success {
     background: url("../assets/form/icon-success.svg") no-repeat top right; }
+  input[type=text][disabled] {
+    opacity: 0.8;
+    background-color: #fafafa; }
   input[type=text].icon {
     text-indent: 2em; }
     input[type=text].icon.user {
