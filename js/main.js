@@ -30,6 +30,7 @@ jQuery(document).ready(function($){
 	/*******************
 		buttons
 	********************/
+	/*
 	var buttonsWrapper = $('#buttons .box'),
 		buttonsHtml = buttonsWrapper.html(),
 		containerHtml = $('<div class="box"></div>').insertAfter(buttonsWrapper),
@@ -48,6 +49,7 @@ jQuery(document).ready(function($){
 			wrapperElement.append('"'+block2[1]+'&lt;/button&gt;');
 		}
 	});
+	*/
 
 	/*******************
 		typography
