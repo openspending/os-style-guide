@@ -1,3 +1,15 @@
+@charset "UTF-8";
+.visuallyhidden,
+.show-for-sr {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
 /* --------------------------------
 
 xBackground
@@ -37,7 +49,7 @@ header {
       width: 180px; } }
 
 .main-nav {
-  /* main navigation background color - full screen on small devices */
+  /* main navigation background colour - full screen on small devices */
   background: #3a99d9; }
   .main-nav li a {
     color: #ffffff;
@@ -75,7 +87,7 @@ header {
     background: #ffffff;
     color: #2a2d34; }
     .download span::before {
-      /* right arrow color */
+      /* right arrow colour */
       border-color: #ffffff; }
 
 /* --------------------------------
@@ -173,7 +185,7 @@ xButtons
       font-size: 1.6rem; } }
 
 .buttons .box:nth-of-type(2) span {
-  /* CSS class name color */
+  /* CSS class name colour */
   color: #3a99d9; }
 
 /* --------------------------------
@@ -470,6 +482,56 @@ Progress Bars
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background-color: #d93d3a; }
+
+/* --------------------------------
+
+Pagination
+
+-------------------------------- */
+.pagination::after {
+  clear: both;
+  content: "";
+  display: table; }
+.pagination li {
+  font-size: 14px;
+  border-radius: 2px;
+  display: inline-block; }
+.pagination a,
+.pagination button {
+  color: #2a2d34;
+  display: block;
+  padding: 8px 12px 6px 12px; }
+  .pagination a:hover,
+  .pagination button:hover {
+    background: #e6e6e6; }
+.pagination .current {
+  padding: 8px 12px 6px 12px;
+  background: #3a99d9;
+  color: #fff;
+  cursor: default;
+  font-weight: 600; }
+.pagination .disabled {
+  padding: 8px 12px 6px 12px;
+  color: #e6e6e6;
+  cursor: default; }
+  .pagination .disabled:hover {
+    background: transparent; }
+.pagination .ellipsis::after {
+  content: '…';
+  padding: 8px 12px 6px 12px;
+  color: #2a2d34; }
+
+.pagination-previous a::before,
+.pagination-previous.disabled::before {
+  content: '«';
+  display: inline-block;
+  margin-right: 0.5rem; }
+
+.pagination-next a::after,
+.pagination-next.disabled::after {
+  content: '»';
+  display: inline-block;
+  margin-left: 0.5rem; }
 
 /* --------------------------------
 

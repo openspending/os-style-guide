@@ -2,24 +2,39 @@
 
 @import '../partials/layout'; // responsive grid and media queries
 
-// color palette - these colors will be the color swatches of the Colors section
+// colour palette - these colours will be the colour swatches of the colours section
 
-$color-1: #2a2d34; // Dark grey
-$color-2: #3a99d9; // Blue
-$color-3: #2abb9c; // Green
-$color-4: #e6e6e6; // Light grey
-$color-5: #ffffff; // White
+$colour-1: #2a2d34; // Dark grey
+$colour-2: #3a99d9; // Blue
+$colour-3: #2abb9c; // Green
+$colour-4: #e6e6e6; // Light grey
+$colour-5: #ffffff; // White
 
-// additional colors
+// additional colours
 
-$primary-colour: $color-2;
-$text-color: $color-1;
-$success: $color-3; // green
+$primary-colour: $colour-2;
+$text-colour: $colour-1;
+$success: $colour-3; // green
 $alert: #d93d3a;  // red
 
 // fonts
 
 $primary-font: 'Hind', 'Open Sans', sans-serif;
+
+
+// helper classes
+.visuallyhidden,
+.show-for-sr {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
 
 /* --------------------------------
 
@@ -29,7 +44,7 @@ xBackground
 
 body {
 	/* this is the page background */
-	background-color: $color-5;
+	background-color: $colour-5;
 }
 
 /* --------------------------------
@@ -40,9 +55,9 @@ xPatterns
 
 .box {
 	/* this is the container of various design elements - i.e. the 2 logo of the branding section */
-	border: 1px solid $color-4;
+	border: 1px solid $colour-4;
 	border-radius: 3px;
-	background: $color-5;
+	background: $colour-5;
 	box-shadow: 0 1px 1px rgba(#000, .05);
 	padding: 6px;
 }
@@ -54,12 +69,12 @@ xNavigation
 -------------------------------- */
 
 header {
-	background-color: $color-1;
+	background-color: $colour-1;
 }
 
 .logo {
 	/* logo box style */
-	background-color: $color-1;
+	background-color: $colour-1;
 	width: 120px;
 
 	@include MQ(M) {
@@ -68,11 +83,11 @@ header {
 }
 
 .main-nav {
-	/* main navigation background color - full screen on small devices */
+	/* main navigation background colour - full screen on small devices */
 	background: $primary-colour;
 
 	li a {
-		color: $color-5;
+		color: $colour-5;
 		border-color: lighten($primary-colour, 5%);
 	}
 
@@ -81,12 +96,12 @@ header {
 			color: lighten($primary-colour, 40%);
 
 			&.selected {
-				color: $color-5;
-				box-shadow: 0 3px 0 $color-5;
+				color: $colour-5;
+				box-shadow: 0 3px 0 $colour-5;
 			}
 
 			.no-touch &:hover {
-				color: $color-5;
+				color: $colour-5;
 			}
 		}
 	}
@@ -94,41 +109,41 @@ header {
 
 .nav-trigger span {
 	/* hamburger menu */
-	background-color: $color-5;
+	background-color: $colour-5;
 
 	&::before,
 	&::after {
 		/* upper and lower lines */
-		background-color: $color-5;
+		background-color: $colour-5;
 	}
 }
 
 .nav-is-visible .nav-trigger span {
 	/* hide line in the center on mobile when nav is visible */
-	background-color: rgba($color-5, 0);
+	background-color: rgba($colour-5, 0);
 
 	&::before, &::after {
 		/* preserve visibility of upper and lower lines - close icon */
-		background-color: rgba($color-5, 1);
+		background-color: rgba($colour-5, 1);
 	}
 }
 
 .download {
 	/* download button top-right visible on big devices */
-	background-color: $color-1;
+	background-color: $colour-1;
 
 	.no-touch &:hover {
-		background-color: lighten($color-1, 10%);
+		background-color: lighten($colour-1, 10%);
 	}
 
 	span {
 		/* tooltip */
-		background: $color-5;
-		color: $color-1;
+		background: $colour-5;
+		color: $colour-1;
 
 		&::before {
-			/* right arrow color */
-			border-color: $color-5;
+			/* right arrow colour */
+			border-color: $colour-5;
 		}
 	}
 }
@@ -140,11 +155,11 @@ xPage title
 -------------------------------- */
 
 main > h1 {
-	color: $text-color;
+	color: $text-colour;
 
 	@include MQ(L) {
 		/* title goes into the header on big devices */
-		color: $color-5;
+		color: $colour-5;
 	}
 }
 
@@ -155,7 +170,7 @@ xTypography
 -------------------------------- */
 
 h1, h2 {
-	color: $text-color;
+	color: $text-colour;
 }
 
 h1 {
@@ -186,13 +201,13 @@ h2 {
 
 section > h2::before {
 	/* number before each section title */
-	color: darken($color-4, 15%);
+	color: darken($colour-4, 15%);
 }
 
 p {
 	font-size: 1.4rem;
 	line-height: 1.4;
-	color: $text-color;
+	color: $text-colour;
 
 	a {
 		color: $primary-colour;
@@ -218,7 +233,7 @@ xButtons
 	font: {
 		size: 1.4rem;
 	}
-	color: $color-5;
+	color: $colour-5;
 	padding: .6em 2.2em;
 	cursor: pointer;
 	background: $primary-colour;
@@ -232,10 +247,10 @@ xButtons
 	}
 
 	&.btn-secondary {
-		background: $color-1;
+		background: $colour-1;
 
 		.no-touch &:hover {
-			background: lighten($color-1, 5%);
+			background: lighten($colour-1, 5%);
 		}
 	}
 
@@ -253,7 +268,7 @@ xButtons
 		box-shadow: inset 0 0 0 1px $primary-colour;
 
 		.no-touch &:hover {
-			color: $color-5;
+			color: $colour-5;
 			background: $primary-colour;
 		}
 	}
@@ -264,7 +279,7 @@ xButtons
 }
 
 .buttons .box:nth-of-type(2) span {
-	/* CSS class name color */
+	/* CSS class name colour */
 	color: $primary-colour;
 }
 
@@ -287,9 +302,9 @@ xForm
 -------------------------------- */
 
 input[type=text], select {
-	border: 1px solid $color-4;
+	border: 1px solid $colour-4;
 	border-radius: .25em;
-	background: $color-5;
+	background: $colour-5;
 	box-sizing: border-box;
 
 	&:focus {
@@ -322,7 +337,7 @@ input[type=text] {
 
 	&[disabled] {
 		opacity: 0.8;
-		background-color: lighten($color-4, 8%);
+		background-color: lighten($colour-4, 8%);
 	}
 
 	&.icon {
@@ -376,7 +391,7 @@ input[type=checkbox] {
 
 	&::before {
 		left: 0;
-		border: 1px solid $color-4;
+		border: 1px solid $colour-4;
 		box-shadow: inset 1px 1px rgba(#000, .03);
 	}
 
@@ -444,16 +459,16 @@ Tooltips
 
 // Mixins
 
-@mixin tooltip($background-color: white,
+@mixin tooltip($background-colour: white,
                $arrow-base: 2em,
                $arrow-length: 1em,
                $border-width: 0,
-               $border-color: false) {
+               $border-colour: false) {
 
   position: absolute;
   box-sizing: border-box;
   margin-bottom: $arrow-length;
-  background-color: $background-color;
+  background-color: $background-colour;
   cursor: default;
   visibility: hidden;
 
@@ -462,21 +477,21 @@ Tooltips
     position: absolute;
     top: 100%; left: 50%;
     width: 0; height: 0;
-    border-top: ($arrow-length - $border-width) solid $background-color;
+    border-top: ($arrow-length - $border-width) solid $background-colour;
     border-left: ($arrow-base / 2 - $border-width) solid transparent;
     border-right: ($arrow-base / 2 - $border-width) solid transparent;
     margin-left: ($border-width - $arrow-base / 2);
   }
 
   @if $border-width {
-    border: $border-width solid $border-color;
+    border: $border-width solid $border-colour;
 
     &:before {
       content: "";
       position: absolute;
       top: 100%; left: 50%;
       width: 0; height: 0;
-      border-top: $arrow-length solid $border-color;
+      border-top: $arrow-length solid $border-colour;
       border-left: ($arrow-base / 2) solid transparent;
       border-right: ($arrow-base / 2) solid transparent;
       margin-left: ($arrow-base / -2);
@@ -517,7 +532,7 @@ Tooltips
   margin-left: -6em; // center the tooltip
   padding: .5em .75em;
   box-shadow: 0 .05em .15em rgba(black, .1);
-  @include tooltip($color-1, 1em, .5em);
+  @include tooltip($colour-1, 1em, .5em);
   color: #fff;
 }
 
@@ -529,11 +544,11 @@ Progress Bars
 -------------------------------- */
 
 .progress-bar {
-  $progress-meter-border-color: $primary-colour;
-  $progress-meter-color: $progress-meter-border-color;
+  $progress-meter-border-colour: $primary-colour;
+  $progress-meter-colour: $progress-meter-border-colour;
   $progress-background: #f5f5f5;
   $progress-animation-duration: 0.7s;
-  $progress-color: white;
+  $progress-colour: white;
   $progress-radius: 2px;
   $progress-height: 1.2em;
 
@@ -546,7 +561,7 @@ Progress Bars
 
   > span.meter {
     @include box-sizing(border-box);
-    background-color: $progress-meter-color;
+    background-color: $progress-meter-colour;
     background-repeat: repeat-x;
     background-size: 40px 40px;
     border-bottom-right-radius: 0;
@@ -557,7 +572,7 @@ Progress Bars
   }
 
   p {
-    color: $progress-color;
+    color: $progress-colour;
     line-height: 1.55em;
     margin: 0;
     padding: 0 .5em;
@@ -570,7 +585,7 @@ Progress Bars
 	  > span.meter {
 	    @include animation(progress $progress-animation-duration linear infinite);
 	    @include box-sizing(border-box);
-	    background-color: $progress-meter-color;
+	    background-color: $progress-meter-colour;
 	    @include background-image(linear-gradient(-45deg, rgba(255,255,255, 0.15) 25%,
 	                                                      transparent 25%,
 	                                                      transparent 50%,
@@ -630,6 +645,108 @@ Progress Bars
 		}
 	}
 }
+
+
+/* --------------------------------
+
+Pagination
+
+-------------------------------- */
+
+
+
+$pagination-item-colour: $text-colour;
+$pagination-item-padding: 8px 12px 6px 12px;
+$pagination-radius: 2px;
+$pagination-item-background-hover: $colour-4;
+$pagination-item-background-current: $primary-colour;
+$pagination-item-colour-current: #fff;
+$pagination-item-colour-disabled: $colour-4;
+$pagination-ellipsis-colour: $text-colour;
+
+/// Adds styles for a pagination container. Apply this to a `<ul>`.
+@mixin pagination-container {
+  @include clearfix;
+
+  // List item
+  li {
+    font-size: 14px;
+    border-radius: $pagination-radius;
+    display: inline-block;
+  }
+
+  // Page links
+  a,
+  button {
+    color: $pagination-item-colour;
+    display: block;
+    padding: $pagination-item-padding;
+
+    &:hover {
+      background: $pagination-item-background-hover;
+    }
+  }
+}
+
+/// Adds styles for the current pagination item..
+@mixin pagination-item-current {
+  padding: $pagination-item-padding;
+  background: $pagination-item-background-current;
+  color: $pagination-item-colour-current;
+  cursor: default;
+	font-weight: 600;
+}
+
+/// Adds styles for a disabled pagination item. Apply this to an `<a>`.
+@mixin pagination-item-disabled {
+  padding: $pagination-item-padding;
+  color: $pagination-item-colour-disabled;
+  cursor: default;
+
+  &:hover {
+    background: transparent;
+  }
+}
+
+/// Adds styles for an ellipsis for use in a pagination list.
+@mixin pagination-ellipsis {
+  content: '…';
+  padding: $pagination-item-padding;
+  color: $pagination-ellipsis-colour;
+}
+
+
+.pagination {
+  @include pagination-container;
+
+  .current {
+    @include pagination-item-current;
+  }
+
+  .disabled {
+    @include pagination-item-disabled;
+  }
+
+  .ellipsis::after {
+    @include pagination-ellipsis;
+  }
+}
+
+.pagination-previous a::before,
+.pagination-previous.disabled::before {
+  content: '«';
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.pagination-next a::after,
+.pagination-next.disabled::after {
+  content: '»';
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+
 
 
 @import '../partials/basic-style';
