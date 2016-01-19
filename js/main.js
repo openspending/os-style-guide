@@ -119,7 +119,7 @@ jQuery(document).ready(function($){
 
 	$('.is-expanded .js-accordion-trigger').bind('click', function(e){
 	  jQuery(this).parent().find('.submenu').slideUp('fast');
-	  jQuery(this).parent().addClass('test');
+	  jQuery(this).parent().removeClass('is-expanded');
 	  e.preventDefault();
 	});
 
