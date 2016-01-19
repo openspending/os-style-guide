@@ -1,4 +1,44 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'os-icons';
+  src: url("../assets/fonts/os-icons.eot?jbw6ba");
+  src: url("../assets/fonts/os-icons.eot?jbw6ba#iefix") format("embedded-opentype"), url("../assets/fonts/os-icons.ttf?jbw6ba") format("truetype"), url("../assets/fonts/os-icons.woff?jbw6ba") format("woff"), url("../assets/fonts/os-icons.svg?jbw6ba#os-icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'os-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-user:before {
+  content: "\e901"; }
+
+.icon-cloud-upload:before {
+  content: "\e902"; }
+
+.icon-cancel:before {
+  content: "\e903"; }
+
+.icon-filter_none:before {
+  content: "\e904"; }
+
+.icon-chevron_right:before {
+  content: "\e905"; }
+
+.icon-arrow_drop_down:before {
+  content: "\e900"; }
+
+.icon-checkmark:before {
+  content: "\e906"; }
+
 .visuallyhidden,
 .show-for-sr {
   border: 0;
@@ -604,7 +644,8 @@ Sidebar
 .sidebar {
   background-color: #2a2d34;
   color: #fff;
-  padding-bottom: 1.5em; }
+  padding-bottom: 1.5em;
+  font-size: 0.9375em; }
   .sidebar header {
     background-color: #3a99d9;
     padding: 1.8em 1.5em;
@@ -617,9 +658,78 @@ Sidebar
     margin-bottom: 0.5em; }
     .sidebar .accordion li .submenu li {
       margin-bottom: 0; }
+    .sidebar .accordion li.is-expanded .js-accordion-trigger:after {
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg); }
+    .sidebar .accordion li.filter .js-accordion-trigger:before {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'os-icons' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\e904";
+      margin-right: 0.5em;
+      position: relative;
+      bottom: -0.0625em; }
+    .sidebar .accordion li.filter .submenu a.active:after {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'os-icons' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\e903";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      right: 1em;
+      margin-top: -8px;
+      opacity: 0.5;
+      text-align: right;
+      font-size: 1.2em; }
+    .sidebar .accordion li.filter .submenu a.active:hover:after {
+      opacity: 1; }
   .sidebar .accordion a {
     display: block;
-    padding: 0.5em 1.5em; }
+    padding: 0.5em 1.5em;
+    position: relative; }
+    .sidebar .accordion a:hover {
+      background-color: rgba(0, 0, 0, 0.15); }
+    .sidebar .accordion a.active {
+      background-color: rgba(0, 0, 0, 0.3);
+      border-left: solid 0.4em #3a99d9;
+      padding-left: 1.1em; }
+    .sidebar .accordion a.js-accordion-trigger:after {
+      content: '\203A';
+      display: block;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      text-align: center;
+      top: 50%;
+      right: 0.75em;
+      margin-top: -6px;
+      line-height: 12px;
+      font-size: 1.7em;
+      font-weight: 100;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
 
 /* --------------------------------
 
