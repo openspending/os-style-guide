@@ -35,7 +35,7 @@ input, textarea, select {
 	font-size: 1.6rem;
 }
 
-header {
+body > header {
 	position: fixed;
 	height: 50px;
 	width: 100%;
@@ -336,6 +336,18 @@ section {
 
 	&:nth-of-type(11) h2::before {
 		content: '11. ';
+	}
+
+	&:nth-of-type(12) h2::before {
+		content: '12. ';
+	}
+
+	&:nth-of-type(13) h2::before {
+		content: '13. ';
+	}
+
+	&:nth-of-type(14) h2::before {
+		content: '14. ';
 	}
 
 	@include MQ(S) {
@@ -642,4 +654,8 @@ section {
 
 .breadcrumbs {
 	margin: 1em;
+}
+
+.side .sidebar {
+	max-width: 210px;
 }

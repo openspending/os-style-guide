@@ -109,4 +109,24 @@ jQuery(document).ready(function($){
 			}
 		});
 	}
+
+
+	/*******************
+		accordion
+	********************/
+
+	jQuery('.is-expanded .js-accordion-trigger').parent().find('.submenu').slideDown('fast');
+
+	$('.is-expanded .js-accordion-trigger').bind('click', function(e){
+	  jQuery(this).parent().find('.submenu').slideUp('fast');
+	  jQuery(this).parent().addClass('test');
+	  e.preventDefault();
+	});
+
+	$(':not(.is-expanded) .js-accordion-trigger').bind('click', function(e){
+		jQuery(this).parent().find('.submenu').slideDown('fast');
+	  jQuery(this).parent().addClass('is-expanded');
+	  e.preventDefault();
+	});
+
 });

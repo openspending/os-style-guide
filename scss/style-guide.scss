@@ -22,6 +22,11 @@ $alert: #d93d3a;  // red
 $primary-font: 'Hind', 'Open Sans', sans-serif;
 
 
+// Sizes
+$base-line-height: 1.5 !default;
+$base-spacing: $base-line-height * 1em !default;
+
+
 // helper classes
 .visuallyhidden,
 .show-for-sr {
@@ -68,7 +73,7 @@ xNavigation
 
 -------------------------------- */
 
-header {
+body > header {
 	background-color: $colour-1;
 }
 
@@ -176,7 +181,7 @@ h1, h2 {
 h1 {
 	font-size: 2.4rem;
 	font-weight: 600;
-	line-height: 1.2;
+	line-height: $base-line-height - 0.3;
 	margin: 0 0 .4em;
 
 	@include MQ(S) {
@@ -206,7 +211,7 @@ section > h2::before {
 
 p {
 	font-size: 1.4rem;
-	line-height: 1.4;
+	line-height: $base-line-height - 0.1;
 	color: $text-colour;
 
 	a {
@@ -216,7 +221,7 @@ p {
 
 	@include MQ(S) {
 		font-size: 1.6rem;
-		line-height: 1.6;
+		line-height: $base-line-height + 0.1;
 	}
 }
 
@@ -573,7 +578,7 @@ Progress Bars
 
   p {
     color: $progress-colour;
-    line-height: 1.6em;
+    line-height: $base-line-height + 0.1;
     margin: 0;
     padding: 0 .5em;
     text-shadow: 0 0 1px rgba(#000, 0.1);
@@ -851,6 +856,62 @@ $breadcrumbs-item-slash: true;
 }
 
 
+/* --------------------------------
 
+Accordion
+
+-------------------------------- */
+
+.js .accordion {
+  ul.submenu {
+    display: none;
+  }
+  .is-expanded {
+    display: block;
+  }
+}
+
+
+/* --------------------------------
+
+Sidebar
+
+-------------------------------- */
+
+.sidebar {
+  background-color: $colour-1;
+  color: #fff;
+  padding-bottom: $base-spacing;
+
+  header {
+    background-color: $primary-colour;
+    padding: $base-spacing * 1.2 $base-spacing;
+    margin-bottom: $base-spacing;
+
+    img {
+      display: block;
+    }
+  }
+
+  a {
+    color: #fff;
+  }
+
+  .accordion {
+    li {
+      margin-bottom: $base-spacing / 3;
+
+      .submenu {
+        li {
+          margin-bottom: 0;
+        }
+      }
+    }
+    a {
+      display: block;
+      padding: $base-spacing / 3 $base-spacing;
+    }
+  }
+}
 
 @import '../partials/basic-style';
