@@ -757,7 +757,6 @@ Footer
   background: #2a2d34;
   width: 100%;
   position: relative;
-  z-index: 99;
   color: white; }
   .site-footer .wrapper {
     padding: 1.5em; }
