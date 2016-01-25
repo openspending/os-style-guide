@@ -736,6 +736,19 @@ Header
 
 /* --------------------------------
 
+Banner
+
+-------------------------------- */
+.banner {
+  background-color: #212329;
+  color: #fff;
+  padding: 1.5em;
+  position: relative; }
+  .banner h1, .banner h2 {
+    color: inherit; }
+
+/* --------------------------------
+
 Accordion
 
 -------------------------------- */
@@ -1232,6 +1245,9 @@ section {
       margin-right: 1.25%; }
     .colors li:nth-of-type(5n) {
       margin-right: 0; } }
+
+.header .site-header:nth-child(n+2) {
+  margin-top: 1.5em; }
 
 .typography .box,
 .buttons .box,

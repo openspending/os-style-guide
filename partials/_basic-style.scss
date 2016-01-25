@@ -510,6 +510,12 @@ section {
 	}
 }
 
+.header {
+	.site-header:nth-child(n+2) {
+		margin-top: $base-spacing;
+	}
+}
+
 .typography .box,
 .buttons .box,
 .icons .box,
