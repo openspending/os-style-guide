@@ -749,6 +749,95 @@ Banner
 
 /* --------------------------------
 
+Footer
+
+-------------------------------- */
+/* footer */
+.site-footer {
+  background: #2a2d34;
+  width: 100%;
+  position: relative;
+  z-index: 99;
+  color: white; }
+  .site-footer .wrapper {
+    padding: 1.5em; }
+    .site-footer .wrapper .footer-logo {
+      margin-right: 1em;
+      margin-bottom: 1em;
+      margin-top: -4px; }
+    .site-footer .wrapper .footer-logo svg {
+      fill: white; }
+    .site-footer .wrapper .footer-logo.ok {
+      opacity: 0.6; }
+      .site-footer .wrapper .footer-logo.ok img {
+        height: 2em; }
+      .site-footer .wrapper .footer-logo.ok svg {
+        height: 2em; }
+    .site-footer .wrapper .footer-logo:hover {
+      opacity: 1; }
+    .site-footer .wrapper ul {
+      margin-bottom: 1em; }
+      @media only screen and (min-width: 1024px) {
+        .site-footer .wrapper ul {
+          float: left;
+          margin-left: 1em;
+          margin-bottom: 0; } }
+    .site-footer .wrapper ul li {
+      padding-right: 1em; }
+      @media only screen and (min-width: 1024px) {
+        .site-footer .wrapper ul li {
+          display: inline;
+          text-align: left; } }
+    .site-footer .wrapper a {
+      color: rgba(255, 255, 255, 0.6); }
+      .site-footer .wrapper a:hover {
+        color: white; }
+      .site-footer .wrapper a[rel~="external"]:after {
+        display: none; }
+    @media only screen and (min-width: 1024px) {
+      .site-footer .wrapper .footer-primary-links,
+      .site-footer .wrapper .footer-secondary-links {
+        float: right; } }
+    .site-footer .wrapper .footer-primary-links li,
+    .site-footer .wrapper .footer-secondary-links li {
+      font-size: .8em;
+      font-weight: 400;
+      line-height: 2em; }
+    .site-footer .wrapper .footer-primary-links ul.footer-social,
+    .site-footer .wrapper .footer-secondary-links ul.footer-social {
+      margin-top: 1em; }
+      @media only screen and (min-width: 1024px) {
+        .site-footer .wrapper .footer-primary-links ul.footer-social,
+        .site-footer .wrapper .footer-secondary-links ul.footer-social {
+          float: right;
+          margin-top: 0; } }
+      .site-footer .wrapper .footer-primary-links ul.footer-social li,
+      .site-footer .wrapper .footer-secondary-links ul.footer-social li {
+        float: left;
+        font-size: 1em;
+        padding-right: .7em; }
+        .site-footer .wrapper .footer-primary-links ul.footer-social li:last-child,
+        .site-footer .wrapper .footer-secondary-links ul.footer-social li:last-child {
+          padding-right: 0; }
+      .site-footer .wrapper .footer-primary-links ul.footer-social img,
+      .site-footer .wrapper .footer-secondary-links ul.footer-social img {
+        opacity: .7;
+        height: 1.6em;
+        padding: 1px; }
+        .site-footer .wrapper .footer-primary-links ul.footer-social img:hover,
+        .site-footer .wrapper .footer-secondary-links ul.footer-social img:hover {
+          opacity: 1; }
+    .site-footer .wrapper .footer-primary-links {
+      display: none; }
+  .site-footer hr {
+    border-color: rgba(255, 255, 255, 0.4);
+    clear: both; }
+  .site-footer p {
+    font-size: 0.7em;
+    color: rgba(255, 255, 255, 0.4); }
+
+/* --------------------------------
+
 Accordion
 
 -------------------------------- */
