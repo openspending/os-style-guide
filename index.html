@@ -301,8 +301,24 @@
 		<section class="typography">
 			<h2>Tooltips</h2>
 			<div class="box">
-				<p>Here is a <a class="tooltip-attached">tooltip<span class="tooltip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></a>.</p>
+				<p>Here is a <a class="tooltip-attached">tooltip<span class="tooltip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></a>. Here is a <label for="modal-1"><span class="modal-trigger">modal</span></label>, and <label for="modal-2"><span class="modal-trigger">another one</span></label>.</p>
 			</div>
+
+			<input class="modal-state" id="modal-1" type="checkbox" />
+			<div class="modal-fade-screen">
+		    <div class="modal">
+		      <div class="modal-close" for="modal-1">Close</div>
+		      <div class="modal-content">Modal 1 Content</div>
+		    </div>
+		  </div>
+
+			<input class="modal-state" id="modal-2" type="checkbox" />
+			<div class="modal-fade-screen">
+		    <div class="user modal">
+		      <div class="modal-close" for="modal-2">Close</div>
+		      <div class="modal-content">Modal 2 Content</div>
+		    </div>
+		  </div>
 		</section>
 
 		<section class="form">

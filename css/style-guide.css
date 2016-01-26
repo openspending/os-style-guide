@@ -940,6 +940,71 @@ Sidebar
       -moz-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out; }
 
+.modal-state {
+  display: none; }
+
+.modal-fade-screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  visibility: hidden;
+  z-index: 99999; }
+  @media only screen and (min-width: 1600px) {
+    .modal-fade-screen {
+      padding-top: 10em; } }
+
+.modal-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer; }
+
+.modal-close {
+  cursor: pointer; }
+
+.modal {
+  background-color: #fff;
+  margin: auto;
+  max-height: 100%;
+  overflow: auto;
+  position: relative;
+  top: 0;
+  transition: opacity 0.25s ease;
+  width: 100%; }
+  @media only screen and (min-width: 1024px) {
+    .modal {
+      max-height: 70%;
+      width: 60%;
+      top: 1.5em; } }
+  @media only screen and (min-width: 1600px) {
+    .modal {
+      width: 50%; } }
+  .modal.user {
+    width: 320px;
+    max-width: 100%; }
+
+.modal-state:checked + .modal-fade-screen {
+  opacity: 1;
+  visibility: visible; }
+
+.modal-open {
+  overflow: hidden; }
+
+.modal-closed {
+  overflow: auto; }
+
+.modal-trigger {
+  color: #3a99d9;
+  cursor: pointer;
+  text-decoration: underline; }
+
 /* --------------------------------
 
 xBasic style
