@@ -1,0 +1,72 @@
+.modal-state {
+  display: none;
+}
+
+.modal-fade-screen { // overlay
+  @include position(fixed, 0 0 0 0);
+  background-color: rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  visibility: hidden;
+  z-index: 99999;
+
+  @include MQ(L) {
+    padding-top: 10em;
+  }
+}
+
+.modal-bg {
+  @include position(absolute, 0 0 0 0);
+  cursor: pointer;
+}
+
+.modal-close {
+  cursor: pointer;
+}
+
+.modal {
+  background-color: #fff;
+  margin: auto;
+  max-height: 100%;
+  overflow: auto;
+  position: relative;
+  top: 0;
+  transition: opacity 0.25s ease;
+  width: 100%;
+
+  @include MQ(M) {
+    max-height: 70%;
+    width: 60%;
+    top: $base-spacing;
+  }
+
+  @include MQ(L) {
+    width: 50%;
+  }
+
+  &.user {
+    width: 320px;
+    max-width: 100%;
+  }
+}
+
+.modal-state:checked + .modal-fade-screen {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal-closed {
+  overflow: auto;
+}
+
+.modal-trigger {
+  color: $primary-colour;
+  cursor: pointer;
+  text-decoration: underline;
+}
+// Based on code by Kasper Mikiewicz

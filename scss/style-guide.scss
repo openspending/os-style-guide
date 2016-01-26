@@ -9,8 +9,8 @@
 $colour-1: #2a2d34; // Dark grey
 $colour-2: #3a99d9; // Blue
 $colour-3: #2abb9c; // Green
-$colour-4: #e6e6e6; // Light grey
-$colour-5: #ffffff; // White
+$colour-4: #7d4e92; // Purple
+$colour-5: #e6e6e6; // Light grey
 
 // additional colours
 
@@ -18,6 +18,7 @@ $primary-colour: $colour-2;
 $text-colour: $colour-1;
 $success: $colour-3; // green
 $alert: #d93d3a;  // red
+$white: #ffffff;
 
 // fonts
 
@@ -51,7 +52,7 @@ xBackground
 
 body {
 	/* this is the page background */
-	background-color: $colour-5;
+	background-color: $white;
 }
 
 /* --------------------------------
@@ -62,9 +63,9 @@ xPatterns
 
 .box {
 	/* this is the container of various design elements - i.e. the 2 logo of the branding section */
-	border: 1px solid $colour-4;
+	border: 1px solid $colour-5;
 	border-radius: 3px;
-	background: $colour-5;
+	background: $white;
 	box-shadow: 0 1px 1px rgba(#000, .05);
 	padding: 6px;
 }
@@ -89,177 +90,8 @@ body > header {
   }
 }
 
+@import 'os/navs';
 
-.dropdown {
-  position: relative;
-
-  & > a {
-    &:after {
-      @include icon-font();
-      content: "\e900";
-      line-height: 0;
-    }
-  }
-
-  $dropdown-distance-from-menu: 2em;
-
-  .dropdown-menu {
-    @include transition (all 0.2s ease-in-out);
-    cursor: pointer;
-    display: none;
-    overflow: show;
-    position: absolute;
-    text-align: left;
-    top: $dropdown-distance-from-menu;
-    z-index: 9;
-    background-color: $primary-colour;
-    padding-top: $base-spacing /2;
-    padding-bottom: $base-spacing /2;
-
-    &.show-menu {
-      display: block;
-    }
-
-    li {
-      display: block;
-      padding: 0;
-
-      @include MQ(M) {
-        white-space: nowrap;
-      }
-
-      a {
-        padding: $base-spacing /2 $base-spacing;
-      }
-    }
-  }
-}
-
-.main-nav {
-  $highlight-height: 6px;
-
-	background: $primary-colour;
-
-	li a {
-    display: block;
-    font-size: 1.8rem;
-    padding: 1em 0;
-    border-bottom-width: 1px;
-    border-style: solid;
-		color: $colour-5;
-		border-color: lighten($primary-colour, 5%);
-	}
-
-  li:first-of-type a {
-    border-top-width: 1px;
-  }
-
-	@include MQ(M) {
-    position: static;
-    width: auto;
-    background: transparent;
-    text-align: left;
-    padding-bottom: $highlight-height;
-
-    li {
-      display: table-cell;
-      vertical-align: middle;
-      padding-left: $base-spacing;
-
-      a {
-        display: inline-block;
-        font-size: 1.5rem;
-        padding: .4em .2em;
-        border-bottom: none;
-        @include transition(all .2s);
-        color: lighten($primary-colour, 40%);
-
-  			.no-touch &:hover {
-  				color: $colour-5;
-  			}
-      }
-
-      &.selected a,
-      a.selected {
-        color: $colour-5;
-        box-shadow: 0 ($highlight-height + 1px) 0 $colour-5;
-      }
-
-      &:first-of-type a {
-        border-top: none;
-      }
-    }
-	}
-}
-
-.secondary-nav {
-  position: absolute;
-  top: $base-spacing;
-  right: $base-spacing;
-
-  li {
-    display: inline-block;
-
-    a {
-      font-size: 1.3rem;
-      text-transform: uppercase;
-      display: block;
-      margin-left: $base-spacing;
-    }
-
-    &.user {
-      a:before {
-        @include icon-font();
-        content: "\e901";
-        display: inline-block;
-        padding-right: 0.5em;
-        font-size: 0.9em;
-      }
-    }
-  }
-}
-
-
-.nav-trigger span {
-	/* hamburger menu */
-	background-color: $colour-5;
-
-	&::before,
-	&::after {
-		/* upper and lower lines */
-		background-color: $colour-5;
-	}
-}
-
-.nav-is-visible .nav-trigger span {
-	/* hide line in the center on mobile when nav is visible */
-	background-color: rgba($colour-5, 0);
-
-	&::before, &::after {
-		/* preserve visibility of upper and lower lines - close icon */
-		background-color: rgba($colour-5, 1);
-	}
-}
-
-.download {
-	/* download button top-right visible on big devices */
-	background-color: $colour-1;
-
-	.no-touch &:hover {
-		background-color: lighten($colour-1, 10%);
-	}
-
-	span {
-		/* tooltip */
-		background: $colour-5;
-		color: $colour-1;
-
-		&::before {
-			/* right arrow colour */
-			border-color: $colour-5;
-		}
-	}
-}
 
 /* --------------------------------
 
@@ -272,7 +104,7 @@ main > h1 {
 
 	@include MQ(L) {
 		/* title goes into the header on big devices */
-		color: $colour-5;
+		color: $white;
 	}
 }
 
@@ -314,7 +146,7 @@ h2 {
 
 section > h2::before {
 	/* number before each section title */
-	color: darken($colour-4, 15%);
+	color: darken($colour-5, 15%);
 }
 
 p {
@@ -339,57 +171,7 @@ xButtons
 
 -------------------------------- */
 
-.btn {
-	border: none;
-	box-shadow: none;
-	border-radius: .2em;
-	font: {
-		size: 1.4rem;
-	}
-	color: $colour-5;
-	padding: .6em 2.2em;
-	cursor: pointer;
-	background: $primary-colour;
-
-	&:focus {
-		outline: none;
-	}
-
-	.no-touch &:hover {
-		background: lighten($primary-colour, 5%);
-	}
-
-	&.btn-secondary {
-		background: $colour-1;
-
-		.no-touch &:hover {
-			background: lighten($colour-1, 5%);
-		}
-	}
-
-	&.btn-alert {
-		background: $alert;
-
-		.no-touch &:hover {
-			background: lighten($alert, 5%);
-		}
-	}
-
-	&.btn-outline {
-		color: $primary-colour;
-		background: transparent;
-		box-shadow: inset 0 0 0 1px $primary-colour;
-
-		.no-touch &:hover {
-			color: $colour-5;
-			background: $primary-colour;
-		}
-	}
-
-	@include MQ(S) {
-		font-size: 1.6rem;
-	}
-}
+@import 'os/buttons';
 
 .buttons .box:nth-of-type(2) span {
 	/* CSS class name colour */
@@ -415,9 +197,9 @@ xForm
 -------------------------------- */
 
 input[type=text], select {
-	border: 1px solid $colour-4;
+	border: 1px solid $colour-5;
 	border-radius: .25em;
-	background: $colour-5;
+	background: $white;
 	box-sizing: border-box;
 
 	&:focus {
@@ -450,7 +232,7 @@ input[type=text] {
 
 	&[disabled] {
 		opacity: 0.8;
-		background-color: lighten($colour-4, 8%);
+		background-color: lighten($colour-5, 8%);
 	}
 
 	&.icon {
@@ -504,7 +286,7 @@ input[type=checkbox] {
 
 	&::before {
 		left: 0;
-		border: 1px solid $colour-4;
+		border: 1px solid $colour-5;
 		box-shadow: inset 1px 1px rgba(#000, .03);
 	}
 
@@ -770,10 +552,10 @@ Pagination
 $pagination-item-colour: $text-colour;
 $pagination-item-padding: 8px 12px 6px 12px;
 $pagination-radius: 2px;
-$pagination-item-background-hover: $colour-4;
+$pagination-item-background-hover: $colour-5;
 $pagination-item-background-current: $primary-colour;
 $pagination-item-colour-current: #fff;
-$pagination-item-colour-disabled: $colour-4;
+$pagination-item-colour-disabled: $colour-5;
 $pagination-ellipsis-colour: $text-colour;
 
 /// Adds styles for a pagination container. Apply this to a `<ul>`.
@@ -907,7 +689,7 @@ Breadcrumbs
 $breadcrumbs-item-font-size: 13px;
 $breadcrumbs-item-color: $primary-colour;
 $breadcrumbs-item-color-current: $colour-1;
-$breadcrumbs-item-color-disabled: $colour-4;
+$breadcrumbs-item-color-disabled: $colour-5;
 $breadcrumbs-item-margin: 0.75em;
 $breadcrumbs-item-uppercase: true;
 $breadcrumbs-item-slash: true;
@@ -932,7 +714,7 @@ $breadcrumbs-item-slash: true;
       $slash: '/';
 
       &:not(:last-child)::after {
-        color: $colour-4;
+        color: $colour-5;
         content: $slash;
         margin: 0 $breadcrumbs-item-margin;
         position: relative;
