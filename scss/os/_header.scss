@@ -1,0 +1,13 @@
+.site-header {
+  background-color: $colour-1;
+  color: #fff;
+  position: relative;
+
+  .logo {
+    padding: $base-spacing $base-spacing $base-spacing / 2 $base-spacing;
+  }
+
+  a {
+    color: inherit;
+  }
+}
