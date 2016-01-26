@@ -132,7 +132,15 @@
 					<li><a href="#">Blog</a></li>
 				</ul>
 				<ul class="secondary-nav">
-					<li class="user"><a href="#">Sam Smith</a></li>
+					<li class="user dropdown">
+						<a href="#">Sam Smith</a>
+						<ul class="user-menu" style="background-image: url('https://secure.gravatar.com/avatar/679cd9ae2110a6b20c3c74ac6a6af97d.jpg?s=256');">
+				      <li class="name">Sam Smith</li>
+				      <li class="date">User since 25/01/2016</li>
+				      <li class="packages"><span>8</span> packages on OpenSpending</li>
+				      <li class="logout"><a href="#">Logout</a></li>
+				    </ul>
+					</li>
 					<li class="dropdown"><a href="#">EN</a></li>
 				</ul>
 			</div>
@@ -301,24 +309,8 @@
 		<section class="typography">
 			<h2>Tooltips</h2>
 			<div class="box">
-				<p>Here is a <a class="tooltip-attached">tooltip<span class="tooltip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></a>. Here is a <label for="modal-1"><span class="modal-trigger">modal</span></label>, and <label for="modal-2"><span class="modal-trigger">another one</span></label>.</p>
+				<p>Here is a <a class="tooltip-attached">tooltip<span class="tooltip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></a>.</p>
 			</div>
-
-			<input class="modal-state" id="modal-1" type="checkbox" />
-			<div class="modal-fade-screen">
-		    <div class="modal">
-		      <div class="modal-close" for="modal-1">Close</div>
-		      <div class="modal-content">Modal 1 Content</div>
-		    </div>
-		  </div>
-
-			<input class="modal-state" id="modal-2" type="checkbox" />
-			<div class="modal-fade-screen">
-		    <div class="user modal">
-		      <div class="modal-close" for="modal-2">Close</div>
-		      <div class="modal-content">Modal 2 Content</div>
-		    </div>
-		  </div>
 		</section>
 
 		<section class="form">

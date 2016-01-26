@@ -8,7 +8,7 @@ jQuery(document).ready(function($){
     e.preventDefault();
     var $button, $menu;
     $button = $(this);
-    $menu = $button.siblings(".dropdown-menu");
+    $menu = $button.siblings("[class$='-menu']");
     $menu.toggleClass("show-menu");
     $menu.children("li").click(function() {
       $menu.removeClass("show-menu");
