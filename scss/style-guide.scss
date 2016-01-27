@@ -2,7 +2,7 @@
 
 @import '../partials/layout'; // responsive grid and media queries
 
-@import '../partials/icons';
+@import 'os/icons';
 
 // colour palette - these colours will be the colour swatches of the colours section
 
@@ -177,6 +177,7 @@ xIcons
 	height: 32px;
 }
 
+@import 'os/typography';
 @import 'os/forms';
 @import 'os/tooltips';
 @import 'os/progress';

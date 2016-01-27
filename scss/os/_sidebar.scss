@@ -4,6 +4,10 @@
   padding-bottom: $base-spacing;
   font-size: em(15);
 
+  a {
+  	text-decoration: none;
+  }
+
   header {
     background-color: $primary-colour;
     padding: $base-spacing * 1.2 $base-spacing;

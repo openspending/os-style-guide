@@ -1,3 +1,8 @@
+input, textarea, select {
+	font-family: $primary-font;
+	font-size: 1.6rem;
+}
+
 input[type=text], select {
 	border: 1px solid $colour-5;
 	border-radius: .25em;

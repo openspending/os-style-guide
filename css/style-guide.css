@@ -108,7 +108,8 @@ body > header {
     z-index: 9;
     background-color: #3a99d9;
     padding-top: 0.75em;
-    padding-bottom: 0.75em; }
+    padding-bottom: 0.75em;
+    box-sizing: border-box; }
     .dropdown .dropdown-menu.show-menu,
     .dropdown .user-menu.show-menu {
       display: block; }
@@ -164,7 +165,8 @@ body > header {
           text-transform: none;
           -webkit-transition: all 0.5s ease-in-out;
           -moz-transition: all 0.5s ease-in-out;
-          transition: all 0.5s ease-in-out; }
+          transition: all 0.5s ease-in-out;
+          box-sizing: border-box; }
           .dropdown .user-menu li.logout a:before {
             content: "\e908"; }
           .dropdown .user-menu li.logout a:hover {
@@ -172,6 +174,8 @@ body > header {
 
 .main-nav {
   background: #3a99d9; }
+  .main-nav a {
+    text-decoration: none; }
   .main-nav li a {
     display: block;
     font-size: 1.8rem;
@@ -215,6 +219,8 @@ body > header {
   position: absolute;
   top: 1.5em;
   right: 1.5em; }
+  .secondary-nav a {
+    text-decoration: none; }
   .secondary-nav li {
     display: inline-block; }
     .secondary-nav li a {
@@ -373,6 +379,17 @@ xIcons
   /* icons size */
   width: 32px;
   height: 32px; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  font-family: "Hind", "Open Sans", sans-serif; }
+
+input, textarea, select {
+  font-family: "Hind", "Open Sans", sans-serif;
+  font-size: 1.6rem; }
 
 input[type=text], select {
   border: 1px solid #e6e6e6;
@@ -861,6 +878,8 @@ select {
   color: #fff;
   padding-bottom: 1.5em;
   font-size: 0.9375em; }
+  .sidebar a {
+    text-decoration: none; }
   .sidebar header {
     background-color: #3a99d9;
     padding: 1.8em 1.5em;
@@ -1036,22 +1055,11 @@ html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-html {
-  font-size: 62.5%; }
-
-body {
-  font-size: 1.6rem;
-  font-family: "Hind", "Open Sans", sans-serif; }
-
 a {
   text-decoration: none; }
 
 img {
   max-width: 100%; }
-
-input, textarea, select {
-  font-family: "Hind", "Open Sans", sans-serif;
-  font-size: 1.6rem; }
 
 body > header {
   position: fixed;

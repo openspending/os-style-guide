@@ -13,15 +13,6 @@ html * {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-html {
-	font-size: 62.5%;
-}
-
-body {
-	font-size: 1.6rem;
-	font-family: $primary-font;
-}
-
 a {
 	text-decoration: none;
 }
@@ -30,10 +21,6 @@ img {
 	max-width: 100%;
 }
 
-input, textarea, select {
-	font-family: $primary-font;
-	font-size: 1.6rem;
-}
 
 body > header {
 	position: fixed;

@@ -21,6 +21,7 @@
     background-color: $primary-colour;
     padding-top: $base-spacing /2;
     padding-bottom: $base-spacing /2;
+    box-sizing: border-box;
 
     &.show-menu {
       display: block;
@@ -95,6 +96,7 @@
           white-space: nowrap;
           text-transform: none;
           @include transition (all 0.5s ease-in-out);
+          box-sizing: border-box;
 
           &:before {
             content: "\e908";
@@ -111,6 +113,10 @@
 
 
 .main-nav {
+  a {
+  	text-decoration: none;
+  }
+
   $highlight-height: 6px;
 
 	background: $primary-colour;
@@ -171,6 +177,10 @@
   position: absolute;
   top: $base-spacing;
   right: $base-spacing;
+
+  a {
+  	text-decoration: none;
+  }
 
   li {
     display: inline-block;
