@@ -487,6 +487,17 @@ input[type=radio]:checked + label::after,
 input[type=checkbox]:checked + label::after {
   display: block; }
 
+.select select {
+  position: relative;
+  padding: .6em 2em .4em 1em;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
+  .select select::-ms-expand {
+    display: none; }
 .select::after {
   /* switcher arrow for select element */
   content: '';
@@ -505,15 +516,9 @@ input[type=checkbox]:checked + label::after {
   background: url("../assets/form/icon-select.svg") no-repeat center center;
   pointer-events: none; }
 
-select {
+.form .input-wrapper {
   position: relative;
-  padding: .6em 2em .4em 1em;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none; }
+  display: inline-block; }
 
 @-webkit-keyframes slide-up {
   0% {
@@ -1485,11 +1490,6 @@ section {
 .form .input-wrapper,
 .form .progress-bar {
   margin: 1em; }
-.form .input-wrapper {
-  position: relative;
-  display: inline-block; }
-.form select::-ms-expand {
-  display: none; }
 
 .no-csstransitions .select::after {
   display: none; }

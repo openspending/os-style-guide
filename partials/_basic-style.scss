@@ -598,15 +598,6 @@ section {
 	.progress-bar {
 		margin: 1em;
 	}
-
-	.input-wrapper {
-		position: relative;
-		display: inline-block;
-	}
-
-	select::-ms-expand {
-      display: none;
-	}
 }
 
 .no-csstransitions .select::after {

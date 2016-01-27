@@ -130,24 +130,37 @@ input[type=checkbox]:checked + label::after {
 	display: block;
 }
 
-.select::after {
-	/* switcher arrow for select element */
-	content: '';
-	position: absolute;
-	z-index: 1;
-	right: 14px;
-	top: 50%;
-	@include transform(translateY(-45%));
-	display: block;
-	width: 12px;
-	height: 12px;
-	background: url('../assets/form/icon-select.svg') no-repeat center center;
-	pointer-events: none;
+.select {
+	select {
+		position: relative;
+		padding: .6em 2em .4em 1em;
+		cursor: pointer;
+		@include appearance(none);
+
+		&::-ms-expand {
+	      display: none;
+		}
+	}
+
+	&::after {
+		/* switcher arrow for select element */
+		content: '';
+		position: absolute;
+		z-index: 1;
+		right: 14px;
+		top: 50%;
+		@include transform(translateY(-45%));
+		display: block;
+		width: 12px;
+		height: 12px;
+		background: url('../assets/form/icon-select.svg') no-repeat center center;
+		pointer-events: none;
+	}
 }
 
-select {
-	position: relative;
-	padding: .6em 2em .4em 1em;
-	cursor: pointer;
-	@include appearance(none);
+.form {
+	.input-wrapper {
+		position: relative;
+		display: inline-block;
+	}
 }
