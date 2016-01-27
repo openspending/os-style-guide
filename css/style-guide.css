@@ -42,344 +42,6 @@
 .icon-checkmark:before {
   content: "\e906"; }
 
-/* --------------------------------
-
-xBackground
-
--------------------------------- */
-body {
-  /* this is the page background */
-  background-color: #ffffff; }
-
-/* --------------------------------
-
-xPatterns
-
--------------------------------- */
-.box {
-  /* this is the container of various design elements - i.e. the 2 logo of the branding section */
-  border: 1px solid #e6e6e6;
-  border-radius: 3px;
-  background: #ffffff;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  padding: 6px; }
-
-/* --------------------------------
-
-xNavigation
-
--------------------------------- */
-body > header {
-  background-color: #2a2d34; }
-  body > header .logo {
-    /* logo box style */
-    background-color: #2a2d34;
-    width: 120px; }
-    @media only screen and (min-width: 1024px) {
-      body > header .logo {
-        width: 180px; } }
-
-.dropdown {
-  position: relative; }
-  .dropdown > a:after {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'os-icons' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "\e900";
-    line-height: 0; }
-  .dropdown .dropdown-menu,
-  .dropdown .user-menu {
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-    display: none;
-    overflow: show;
-    position: absolute;
-    text-align: left;
-    z-index: 9;
-    background-color: #3a99d9;
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
-    box-sizing: border-box; }
-    .dropdown .dropdown-menu.show-menu,
-    .dropdown .user-menu.show-menu {
-      display: block; }
-  .dropdown .dropdown-menu {
-    top: 2em; }
-    .dropdown .dropdown-menu li {
-      display: block;
-      padding: 0; }
-      @media only screen and (min-width: 1024px) {
-        .dropdown .dropdown-menu li {
-          white-space: nowrap; } }
-      .dropdown .dropdown-menu li a {
-        padding: 0.75em 1.5em; }
-  .dropdown .user-menu {
-    top: 1.5em;
-    right: 0;
-    min-width: 15.6em;
-    height: 6em;
-    padding-left: 6.75em;
-    padding-right: 0.75em;
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 6em auto;
-    background-color: #25282e;
-    border-right: solid 3px #3a99d9; }
-    .dropdown .user-menu li {
-      display: block;
-      font-size: 0.8em;
-      line-height: 1.1; }
-      .dropdown .user-menu li.name {
-        font-size: 1.2em;
-        font-weight: 600;
-        padding-bottom: 0.05em; }
-      .dropdown .user-menu li.packages {
-        padding-top: 0.5em; }
-        .dropdown .user-menu li.packages span {
-          display: inline-block;
-          background-color: #ffffff;
-          color: #25282e;
-          padding-left: 0.2em;
-          padding-right: 0.2em; }
-      .dropdown .user-menu li.logout {
-        position: absolute;
-        top: 0;
-        left: 0; }
-        .dropdown .user-menu li.logout a {
-          background-color: #3a99d9;
-          padding: 3px 4px 1px 5px;
-          margin: 0;
-          width: 20px;
-          overflow: hidden;
-          white-space: nowrap;
-          text-transform: none;
-          -webkit-transition: all 0.5s ease-in-out;
-          -moz-transition: all 0.5s ease-in-out;
-          transition: all 0.5s ease-in-out;
-          box-sizing: border-box; }
-          .dropdown .user-menu li.logout a:before {
-            content: "\e908"; }
-          .dropdown .user-menu li.logout a:hover {
-            width: 5.5em; }
-
-.main-nav {
-  background: #3a99d9; }
-  .main-nav a {
-    text-decoration: none; }
-  .main-nav li a {
-    display: block;
-    font-size: 1.8rem;
-    padding: 1em 0;
-    border-bottom-width: 1px;
-    border-style: solid;
-    color: #ffffff;
-    border-color: #4fa4dd; }
-  .main-nav li:first-of-type a {
-    border-top-width: 1px; }
-  @media only screen and (min-width: 1024px) {
-    .main-nav {
-      position: static;
-      width: auto;
-      background: transparent;
-      text-align: left;
-      padding-bottom: 6px; }
-      .main-nav li {
-        display: table-cell;
-        vertical-align: middle;
-        padding-left: 1.5em; }
-        .main-nav li a {
-          display: inline-block;
-          font-size: 1.5rem;
-          padding: .4em .2em;
-          border-bottom: none;
-          -webkit-transition: all 0.2s;
-          -moz-transition: all 0.2s;
-          transition: all 0.2s;
-          color: #e5f2fa; }
-          .no-touch .main-nav li a:hover {
-            color: #ffffff; }
-        .main-nav li.selected a,
-        .main-nav li a.selected {
-          color: #ffffff;
-          box-shadow: 0 7px 0 #ffffff; }
-        .main-nav li:first-of-type a {
-          border-top: none; } }
-
-.secondary-nav {
-  position: absolute;
-  top: 1.5em;
-  right: 1.5em; }
-  .secondary-nav a {
-    text-decoration: none; }
-  .secondary-nav li {
-    display: inline-block; }
-    .secondary-nav li a {
-      font-size: 1.3rem;
-      text-transform: uppercase;
-      display: block;
-      margin-left: 1.5em; }
-    .secondary-nav li.user a:before {
-      /* use !important to prevent issues with browser extensions that change fonts */
-      font-family: 'os-icons' !important;
-      speak: none;
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1;
-      /* Better Font Rendering =========== */
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      content: "\e901";
-      display: inline-block;
-      padding-right: 0.5em;
-      font-size: 0.9em; }
-
-.nav-trigger span {
-  /* hamburger menu */
-  background-color: #ffffff; }
-  .nav-trigger span::before, .nav-trigger span::after {
-    /* upper and lower lines */
-    background-color: #ffffff; }
-
-.nav-is-visible .nav-trigger span {
-  /* hide line in the center on mobile when nav is visible */
-  background-color: rgba(255, 255, 255, 0); }
-  .nav-is-visible .nav-trigger span::before, .nav-is-visible .nav-trigger span::after {
-    /* preserve visibility of upper and lower lines - close icon */
-    background-color: white; }
-
-.download {
-  /* download button top-right visible on big devices */
-  background-color: #2a2d34; }
-  .no-touch .download:hover {
-    background-color: #414550; }
-  .download span {
-    /* tooltip */
-    background: #ffffff;
-    color: #2a2d34; }
-    .download span::before {
-      /* right arrow colour */
-      border-color: #ffffff; }
-
-/* --------------------------------
-
-xPage title
-
--------------------------------- */
-main > h1 {
-  color: #2a2d34; }
-  @media only screen and (min-width: 1600px) {
-    main > h1 {
-      /* title goes into the header on big devices */
-      color: #ffffff; } }
-
-/* --------------------------------
-
-xTypography
-
--------------------------------- */
-h1, h2 {
-  color: #2a2d34; }
-
-h1 {
-  font-size: 2.4rem;
-  font-weight: 600;
-  line-height: 1.2;
-  margin: 0 0 .4em; }
-  @media only screen and (min-width: 768px) {
-    h1 {
-      font-size: 3.2rem; } }
-  @media only screen and (min-width: 1024px) {
-    h1 {
-      font-size: 4rem; } }
-
-h2 {
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 1em 0; }
-  @media only screen and (min-width: 768px) {
-    h2 {
-      font-size: 1.8rem;
-      margin: 1em 0 1.4em; } }
-
-section > h2::before {
-  /* number before each section title */
-  color: silver; }
-
-p {
-  font-size: 1.4rem;
-  line-height: 1.4;
-  color: #2a2d34; }
-  p a {
-    color: #3a99d9;
-    text-decoration: underline; }
-  @media only screen and (min-width: 768px) {
-    p {
-      font-size: 1.6rem;
-      line-height: 1.6; } }
-
-/* --------------------------------
-
-xButtons
-
--------------------------------- */
-.btn {
-  border: none;
-  box-shadow: none;
-  border-radius: .2em;
-  font-size: 1.4rem;
-  color: #e6e6e6;
-  padding: .6em 2.2em;
-  cursor: pointer;
-  background: #3a99d9; }
-  .btn:focus {
-    outline: none; }
-  .no-touch .btn:hover {
-    background: #4fa4dd; }
-  .btn.btn-secondary {
-    background: #2a2d34; }
-    .no-touch .btn.btn-secondary:hover {
-      background: #353942; }
-  .btn.btn-alert {
-    background: #d93d3a; }
-    .no-touch .btn.btn-alert:hover {
-      background: #dd524f; }
-  .btn.btn-outline {
-    color: #3a99d9;
-    background: transparent;
-    box-shadow: inset 0 0 0 1px #3a99d9; }
-    .no-touch .btn.btn-outline:hover {
-      color: #e6e6e6;
-      background: #3a99d9; }
-  @media only screen and (min-width: 768px) {
-    .btn {
-      font-size: 1.6rem; } }
-
-.buttons .box:nth-of-type(2) span {
-  /* CSS class name colour */
-  color: #3a99d9; }
-
-/* --------------------------------
-
-xIcons
-
--------------------------------- */
-.icons li {
-  /* icons size */
-  width: 32px;
-  height: 32px; }
-
 html {
   font-size: 62.5%; }
 
@@ -970,6 +632,344 @@ input[type=checkbox]:checked + label::after {
       -moz-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out; }
 
+.dropdown {
+  position: relative; }
+  .dropdown > a:after {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'os-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e900";
+    line-height: 0; }
+  .dropdown .dropdown-menu,
+  .dropdown .user-menu {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    display: none;
+    overflow: show;
+    position: absolute;
+    text-align: left;
+    z-index: 9;
+    background-color: #3a99d9;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    box-sizing: border-box; }
+    .dropdown .dropdown-menu.show-menu,
+    .dropdown .user-menu.show-menu {
+      display: block; }
+  .dropdown .dropdown-menu {
+    top: 2em; }
+    .dropdown .dropdown-menu li {
+      display: block;
+      padding: 0; }
+      @media only screen and (min-width: 1024px) {
+        .dropdown .dropdown-menu li {
+          white-space: nowrap; } }
+      .dropdown .dropdown-menu li a {
+        padding: 0.75em 1.5em; }
+  .dropdown .user-menu {
+    top: 1.5em;
+    right: 0;
+    min-width: 15.6em;
+    height: 6em;
+    padding-left: 6.75em;
+    padding-right: 0.75em;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 6em auto;
+    background-color: #25282e;
+    border-right: solid 3px #3a99d9; }
+    .dropdown .user-menu li {
+      display: block;
+      font-size: 0.8em;
+      line-height: 1.1; }
+      .dropdown .user-menu li.name {
+        font-size: 1.2em;
+        font-weight: 600;
+        padding-bottom: 0.05em; }
+      .dropdown .user-menu li.packages {
+        padding-top: 0.5em; }
+        .dropdown .user-menu li.packages span {
+          display: inline-block;
+          background-color: #ffffff;
+          color: #25282e;
+          padding-left: 0.2em;
+          padding-right: 0.2em; }
+      .dropdown .user-menu li.logout {
+        position: absolute;
+        top: 0;
+        left: 0; }
+        .dropdown .user-menu li.logout a {
+          background-color: #3a99d9;
+          padding: 3px 4px 1px 5px;
+          margin: 0;
+          width: 20px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-transform: none;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+          box-sizing: border-box; }
+          .dropdown .user-menu li.logout a:before {
+            content: "\e908"; }
+          .dropdown .user-menu li.logout a:hover {
+            width: 5.5em; }
+
+.main-nav {
+  background: #3a99d9; }
+  .main-nav a {
+    text-decoration: none; }
+  .main-nav li a {
+    display: block;
+    font-size: 1.8rem;
+    padding: 1em 0;
+    border-bottom-width: 1px;
+    border-style: solid;
+    color: #ffffff;
+    border-color: #4fa4dd; }
+  .main-nav li:first-of-type a {
+    border-top-width: 1px; }
+  @media only screen and (min-width: 1024px) {
+    .main-nav {
+      position: static;
+      width: auto;
+      background: transparent;
+      text-align: left;
+      padding-bottom: 6px; }
+      .main-nav li {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 1.5em; }
+        .main-nav li a {
+          display: inline-block;
+          font-size: 1.5rem;
+          padding: .4em .2em;
+          border-bottom: none;
+          -webkit-transition: all 0.2s;
+          -moz-transition: all 0.2s;
+          transition: all 0.2s;
+          color: #e5f2fa; }
+          .no-touch .main-nav li a:hover {
+            color: #ffffff; }
+        .main-nav li.selected a,
+        .main-nav li a.selected {
+          color: #ffffff;
+          box-shadow: 0 7px 0 #ffffff; }
+        .main-nav li:first-of-type a {
+          border-top: none; } }
+
+.secondary-nav {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em; }
+  .secondary-nav a {
+    text-decoration: none; }
+  .secondary-nav li {
+    display: inline-block; }
+    .secondary-nav li a {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      display: block;
+      margin-left: 1.5em; }
+    .secondary-nav li.user a:before {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'os-icons' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\e901";
+      display: inline-block;
+      padding-right: 0.5em;
+      font-size: 0.9em; }
+
+.nav-trigger span {
+  /* hamburger menu */
+  background-color: #ffffff; }
+  .nav-trigger span::before, .nav-trigger span::after {
+    /* upper and lower lines */
+    background-color: #ffffff; }
+
+.nav-is-visible .nav-trigger span {
+  /* hide line in the center on mobile when nav is visible */
+  background-color: rgba(255, 255, 255, 0); }
+  .nav-is-visible .nav-trigger span::before, .nav-is-visible .nav-trigger span::after {
+    /* preserve visibility of upper and lower lines - close icon */
+    background-color: white; }
+
+.download {
+  /* download button top-right visible on big devices */
+  background-color: #2a2d34; }
+  .no-touch .download:hover {
+    background-color: #414550; }
+  .download span {
+    /* tooltip */
+    background: #ffffff;
+    color: #2a2d34; }
+    .download span::before {
+      /* right arrow colour */
+      border-color: #ffffff; }
+
+.btn {
+  border: none;
+  box-shadow: none;
+  border-radius: .2em;
+  font-size: 1.4rem;
+  color: #e6e6e6;
+  padding: .6em 2.2em;
+  cursor: pointer;
+  background: #3a99d9; }
+  .btn:focus {
+    outline: none; }
+  .no-touch .btn:hover {
+    background: #4fa4dd; }
+  .btn.btn-secondary {
+    background: #2a2d34; }
+    .no-touch .btn.btn-secondary:hover {
+      background: #353942; }
+  .btn.btn-alert {
+    background: #d93d3a; }
+    .no-touch .btn.btn-alert:hover {
+      background: #dd524f; }
+  .btn.btn-outline {
+    color: #3a99d9;
+    background: transparent;
+    box-shadow: inset 0 0 0 1px #3a99d9; }
+    .no-touch .btn.btn-outline:hover {
+      color: #e6e6e6;
+      background: #3a99d9; }
+  @media only screen and (min-width: 768px) {
+    .btn {
+      font-size: 1.6rem; } }
+
+/* --------------------------------
+
+xBackground
+
+-------------------------------- */
+body {
+  /* this is the page background */
+  background-color: #ffffff; }
+
+/* --------------------------------
+
+xPatterns
+
+-------------------------------- */
+.box {
+  /* this is the container of various design elements - i.e. the 2 logo of the branding section */
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 6px; }
+
+/* --------------------------------
+
+xNavigation
+
+-------------------------------- */
+body > header {
+  background-color: #2a2d34; }
+  body > header .logo {
+    /* logo box style */
+    background-color: #2a2d34;
+    width: 120px; }
+    @media only screen and (min-width: 1024px) {
+      body > header .logo {
+        width: 180px; } }
+
+/* --------------------------------
+
+xPage title
+
+-------------------------------- */
+main > h1 {
+  color: #2a2d34; }
+  @media only screen and (min-width: 1600px) {
+    main > h1 {
+      /* title goes into the header on big devices */
+      color: #ffffff; } }
+
+/* --------------------------------
+
+xTypography
+
+-------------------------------- */
+h1, h2 {
+  color: #2a2d34; }
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 .4em; }
+  @media only screen and (min-width: 768px) {
+    h1 {
+      font-size: 3.2rem; } }
+  @media only screen and (min-width: 1024px) {
+    h1 {
+      font-size: 4rem; } }
+
+h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1em 0; }
+  @media only screen and (min-width: 768px) {
+    h2 {
+      font-size: 1.8rem;
+      margin: 1em 0 1.4em; } }
+
+section > h2::before {
+  /* number before each section title */
+  color: silver; }
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #2a2d34; }
+  p a {
+    color: #3a99d9;
+    text-decoration: underline; }
+  @media only screen and (min-width: 768px) {
+    p {
+      font-size: 1.6rem;
+      line-height: 1.6; } }
+
+/* --------------------------------
+
+xButtons
+
+-------------------------------- */
+.buttons .box:nth-of-type(2) span {
+  /* CSS class name colour */
+  color: #3a99d9; }
+
+/* --------------------------------
+
+xIcons
+
+-------------------------------- */
+.icons li {
+  /* icons size */
+  width: 32px;
+  height: 32px; }
+
 /* --------------------------------
 
 Accordion
@@ -979,72 +979,6 @@ Accordion
   display: none; }
 .js .accordion .is-expanded {
   display: block; }
-
-.modal-state {
-  display: none; }
-
-.modal-fade-screen {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(42, 45, 52, 0.95);
-  opacity: 0;
-  transition: opacity 0.25s ease;
-  visibility: hidden;
-  z-index: 99999; }
-  @media only screen and (min-width: 1600px) {
-    .modal-fade-screen {
-      padding-top: 10em; } }
-
-.modal-bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  cursor: pointer; }
-
-.modal-close {
-  cursor: pointer;
-  position: absolute;
-  top: 1.5em;
-  right: 1.5em;
-  z-index: 1; }
-
-.modal {
-  background-color: #fff;
-  margin: auto;
-  max-height: 100%;
-  overflow: auto;
-  position: relative;
-  top: 0;
-  transition: opacity 0.25s ease;
-  width: 100%; }
-  @media only screen and (min-width: 1024px) {
-    .modal {
-      max-height: 70%;
-      width: 60%;
-      top: 1.5em; } }
-  @media only screen and (min-width: 1600px) {
-    .modal {
-      width: 50%; } }
-
-.modal-state:checked + .modal-fade-screen {
-  opacity: 1;
-  visibility: visible; }
-
-.modal-open {
-  overflow: hidden; }
-
-.modal-closed {
-  overflow: auto; }
-
-.modal-trigger {
-  color: #3a99d9;
-  cursor: pointer;
-  text-decoration: underline; }
 
 /* --------------------------------
 
