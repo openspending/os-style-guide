@@ -37,6 +37,13 @@ $breadcrumbs-item-slash: true;
     @else {
       margin-right: $breadcrumbs-item-margin;
     }
+
+    span {
+      @include hide-text;
+      height: 0;
+      display: inline-block;
+      width: 0;
+    }
   }
 
   // Page links

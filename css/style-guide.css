@@ -42,17 +42,6 @@
 .icon-checkmark:before {
   content: "\e906"; }
 
-.visuallyhidden,
-.show-for-sr {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
 /* --------------------------------
 
 xBackground
@@ -664,6 +653,18 @@ select {
   font-size: 14px;
   border-radius: 2px;
   display: inline-block; }
+  .pagination li span {
+    height: 1em;
+    line-height: 1.5;
+    overflow: hidden;
+    height: 0;
+    display: inline-block;
+    width: 0; }
+    .pagination li span::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 100%; }
 .pagination a,
 .pagination button {
   color: #2a2d34;
@@ -736,6 +737,18 @@ select {
       position: relative;
       top: 1px;
       opacity: 1; }
+    .breadcrumbs li span {
+      height: 1em;
+      line-height: 1.5;
+      overflow: hidden;
+      height: 0;
+      display: inline-block;
+      width: 0; }
+      .breadcrumbs li span::before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 100%; }
   .breadcrumbs a {
     color: #3a99d9; }
     .breadcrumbs a:hover {

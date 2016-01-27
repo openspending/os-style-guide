@@ -16,6 +16,13 @@ $pagination-ellipsis-colour: $text-colour;
     font-size: 14px;
     border-radius: $pagination-radius;
     display: inline-block;
+
+    span {
+      @include hide-text;
+      height: 0;
+      display: inline-block;
+      width: 0;
+    }
   }
 
   // Page links
