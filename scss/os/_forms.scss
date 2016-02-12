@@ -30,11 +30,11 @@ input[type=text] {
 	}
 
 	&[required] {
-		background: url("../assets/form/icon-required.svg") no-repeat top right;
+		background: url("/form/icon-required.svg") no-repeat top right;
 	}
 
 	&.success {
-		background: url("../assets/form/icon-success.svg") no-repeat top right;
+		background: url("/form/icon-success.svg") no-repeat top right;
 	}
 
 	&[disabled] {
@@ -51,14 +51,14 @@ input[type=text] {
 			background-size: 24px auto;
 
 			&[required] {
-				background-image: url($image), url('../assets/form/icon-required.svg');
+				background-image: url($image), url('/form/icon-required.svg');
 				background-position: .75em center, right top;
 				background-size: 24px auto, auto;
 			}
 		}
 
 		&.user {
-			@include icon("../assets/form/icon-user.svg");
+			@include icon("/form/icon-user.svg");
 		}
 	}
 }
@@ -99,14 +99,14 @@ input[type=checkbox] {
 
 	&::after {
 		left: 0;
-		background: url('../assets/form/icon-check.svg') no-repeat center center;
+		background: url('/form/icon-check.svg') no-repeat center center;
 		display: none;
 	}
 }
 
 .radio-label {
 	&::after {
-		background-image: url('../assets/form/icon-radio.svg');
+		background-image: url('/form/icon-radio.svg');
 	}
 
 	&::before {
@@ -153,7 +153,7 @@ input[type=checkbox]:checked + label::after {
 		display: block;
 		width: 12px;
 		height: 12px;
-		background: url('../assets/form/icon-select.svg') no-repeat center center;
+		background: url('/form/icon-select.svg') no-repeat center center;
 		pointer-events: none;
 	}
 }

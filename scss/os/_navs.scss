@@ -13,7 +13,7 @@
   .user-menu {
     @include transition (all 0.2s ease-in-out);
     cursor: pointer;
-    display: none;
+    //display: none;
     overflow: show;
     position: absolute;
     text-align: left;
@@ -29,7 +29,7 @@
   }
 
   .dropdown-menu {
-    top: 2em;
+    //top: 2em;
 
     li {
       display: block;
@@ -40,10 +40,15 @@
       }
 
       a {
+        color: #fff;
         padding: $base-spacing /2 $base-spacing;
         border-bottom: solid 1px lighten($primary-colour, 5%);
         border-top: none;
         display: block;
+
+        &:hover {
+          color: #333;
+        }
       }
     }
   }

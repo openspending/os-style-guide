@@ -1,0 +1,26 @@
+{
+  "name": "os-style-guide",
+  "version": "0.0.1",
+  "description": "OS Style Guide",
+  "keywords": [],
+  "main": "css/style-guide.css",
+  "scripts": {},
+  "engines": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openspending/os-style-guide.git"
+  },
+  "author": {
+    "url": "http://labs.openspending.org/"
+  },
+  "contributors": [
+    {
+      "name": "Levko Kravets",
+      "email": "kravets@qarea.com"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "http://labs.openspending.org/os-style-guide/",
+  "dependencies": {},
+  "devDependencies": {}
+}
