@@ -1,8 +1,15 @@
-.site-header {
+.site-header,
+.app-header {
   background-color: $colour-1;
   color: #fff;
   position: relative;
 
+  a {
+    color: inherit;
+  }
+}
+
+.site-header {
   .logo {
     padding: $base-spacing $base-spacing $base-spacing / 2 $base-spacing;
     display: block;
@@ -26,8 +33,49 @@
       }
     }
   }
+}
 
-  a {
-    color: inherit;
+.app-header {
+  height: 50px;
+
+  & > a {
+    display: block;
+    height: 50px;
+
+    &:hover {
+      background-color: darken($colour-1, 4);
+    }
+
+    svg {
+      fill: currentColor;
+      height: 50px;
+    }
+
+    &:first-of-type {
+      background-color: $primary-colour;
+      width: 50px;
+      float: left;
+      text-align: center;
+
+      svg {
+        width: 30px;
+      }
+
+      & + a {
+        margin-left: 50px;
+        width: 155px;
+        padding-left: 10px;
+
+        svg {
+          width: 90px;
+        }
+      }
+    }
+  }
+
+  .secondary-nav {
+    @include MQ(M) {
+      top: 19px;
+    }
   }
 }

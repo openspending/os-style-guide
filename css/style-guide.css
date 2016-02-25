@@ -440,28 +440,58 @@ input[type=checkbox]:checked + label::after {
   .breadcrumbs .disabled {
     color: #e6e6e6; }
 
-.site-header {
+.site-header,
+.app-header {
   background-color: #2a2d34;
   color: #fff;
   position: relative; }
-  .site-header .logo {
-    padding: 1.5em 1.5em 0.75em 1.5em;
-    display: block;
-    fill: currentColor; }
-    .site-header .logo.small {
-      height: 22px;
-      padding: 0.75em;
-      box-sizing: content-box; }
-      @media only screen and (min-width: 1024px) {
-        .site-header .logo.small {
-          display: none; } }
-    .site-header .logo.full {
-      display: none; }
-      @media only screen and (min-width: 1024px) {
-        .site-header .logo.full {
-          display: block; } }
-  .site-header a {
+  .site-header a,
+  .app-header a {
     color: inherit; }
+
+.site-header .logo {
+  padding: 1.5em 1.5em 0.75em 1.5em;
+  display: block;
+  fill: currentColor; }
+  .site-header .logo.small {
+    height: 22px;
+    padding: 0.75em;
+    box-sizing: content-box; }
+    @media only screen and (min-width: 1024px) {
+      .site-header .logo.small {
+        display: none; } }
+  .site-header .logo.full {
+    display: none; }
+    @media only screen and (min-width: 1024px) {
+      .site-header .logo.full {
+        display: block; } }
+
+.app-header {
+  height: 50px; }
+  .app-header > a {
+    display: block;
+    height: 50px; }
+    .app-header > a:hover {
+      background-color: #212329; }
+    .app-header > a svg {
+      fill: currentColor;
+      height: 50px; }
+    .app-header > a:first-of-type {
+      background-color: #3a99d9;
+      width: 50px;
+      float: left;
+      text-align: center; }
+      .app-header > a:first-of-type svg {
+        width: 30px; }
+      .app-header > a:first-of-type + a {
+        margin-left: 50px;
+        width: 155px;
+        padding-left: 10px; }
+        .app-header > a:first-of-type + a svg {
+          width: 90px; }
+  @media only screen and (min-width: 1024px) {
+    .app-header .secondary-nav {
+      top: 19px; } }
 
 .banner {
   background-color: #212329;
@@ -1407,7 +1437,8 @@ section {
     .colors li:nth-of-type(5n) {
       margin-right: 0; } }
 
-.header .site-header:nth-child(n+2) {
+.header .site-header:nth-child(n+2),
+.header .app-header:nth-child(n+2) {
   margin-top: 1.5em; }
 
 .typography .box,
