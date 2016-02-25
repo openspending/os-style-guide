@@ -473,7 +473,7 @@ input[type=checkbox]:checked + label::after {
 
 /* footer */
 .site-footer {
-  background: #2a2d34;
+  background: #212329;
   width: 100%;
   position: relative;
   color: white; }
@@ -545,8 +545,22 @@ input[type=checkbox]:checked + label::after {
         .site-footer .wrapper .footer-primary-links ul.footer-social img:hover,
         .site-footer .wrapper .footer-secondary-links ul.footer-social img:hover {
           opacity: 1; }
-    .site-footer .wrapper .footer-primary-links {
-      display: none; }
+    .site-footer .wrapper .footer-primary-links svg {
+      height: 16px;
+      position: relative;
+      top: 4px;
+      fill: white; }
+    @media only screen and (min-width: 1024px) {
+      .site-footer .wrapper .footer-primary-links li {
+        padding-right: 0;
+        padding-left: 0.75em; } }
+    .site-footer .wrapper .footer-primary-links .viewer svg {
+      height: 13px;
+      top: 1px; }
+    .site-footer .wrapper .footer-primary-links a {
+      opacity: 0.8; }
+      .site-footer .wrapper .footer-primary-links a:link:hover {
+        opacity: 1; }
   .site-footer hr {
     border-color: rgba(255, 255, 255, 0.4);
     clear: both; }

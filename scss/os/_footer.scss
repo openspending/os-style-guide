@@ -1,6 +1,6 @@
 /* footer */
 .site-footer {
-  $footer-background: $colour-1;
+  $footer-background: darken($colour-1, 4);
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, .4);
   $footer-disclaimer-color: transparentize($footer-color, .6);
@@ -112,7 +112,34 @@
       }
     }
     .footer-primary-links {
-      display: none;
+      svg {
+        height: 16px;
+        position: relative;
+        top: 4px;
+        fill: $footer-color;
+      }
+
+      li {
+        @include MQ(M) {
+          padding-right: 0;
+          padding-left: $base-spacing /2;
+        }
+      }
+
+      .viewer {
+        svg {
+          height: 13px;
+          top: 1px;
+        }
+      }
+
+      a {
+        opacity: 0.8;
+
+        &:link:hover {
+          opacity: 1;
+        }
+      }
     }
   }
 
