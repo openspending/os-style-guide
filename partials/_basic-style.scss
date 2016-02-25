@@ -551,6 +551,18 @@ section {
 
 /* xIcons section - basic style */
 
+$icon-list: arrow_down arrow_drop_down box braces bulb checkmark chevron_with_circle_left circle_plus download embed file filter location remove share trashcan upload user;
+
+@mixin icons {
+	$icon-number: 1;
+	@each $icon in $icon-list {
+		.icon-#{$icon-number} {
+			background-image: url("../assets/icons/#{$icon}.svg");
+		}
+		$icon-number: $icon-number+ 1;
+	}
+}
+
 .icons {
 	li {
 		display: inline-block;
@@ -560,34 +572,7 @@ section {
 		background-size: contain;
 		opacity: 0.5;
 	}
-
-	.icon-1 {
-		background-image: url('../assets/icons/arrow_down.svg');
-	}
-
-	.icon-2 {
-		background-image: url('../assets/icons/arrow_drop_down.svg');
-	}
-
-	.icon-3 {
-		background-image: url('../assets/icons/checkmark.svg');
-	}
-
-	.icon-4 {
-		background-image: url('../assets/icons/filter.svg');
-	}
-
-	.icon-5 {
-		background-image: url('../assets/icons/remove.svg');
-	}
-
-	.icon-6 {
-		background-image: url('../assets/icons/upload.svg');
-	}
-
-	.icon-7 {
-		background-image: url('../assets/icons/user.svg');
-	}
+	@include icons;
 }
 
 /* xForm section - basic style */

@@ -1439,14 +1439,36 @@ section {
 .icons .icon-2 {
   background-image: url("../assets/icons/arrow_drop_down.svg"); }
 .icons .icon-3 {
-  background-image: url("../assets/icons/checkmark.svg"); }
+  background-image: url("../assets/icons/box.svg"); }
 .icons .icon-4 {
-  background-image: url("../assets/icons/filter.svg"); }
+  background-image: url("../assets/icons/braces.svg"); }
 .icons .icon-5 {
-  background-image: url("../assets/icons/remove.svg"); }
+  background-image: url("../assets/icons/bulb.svg"); }
 .icons .icon-6 {
-  background-image: url("../assets/icons/upload.svg"); }
+  background-image: url("../assets/icons/checkmark.svg"); }
 .icons .icon-7 {
+  background-image: url("../assets/icons/chevron_with_circle_left.svg"); }
+.icons .icon-8 {
+  background-image: url("../assets/icons/circle_plus.svg"); }
+.icons .icon-9 {
+  background-image: url("../assets/icons/download.svg"); }
+.icons .icon-10 {
+  background-image: url("../assets/icons/embed.svg"); }
+.icons .icon-11 {
+  background-image: url("../assets/icons/file.svg"); }
+.icons .icon-12 {
+  background-image: url("../assets/icons/filter.svg"); }
+.icons .icon-13 {
+  background-image: url("../assets/icons/location.svg"); }
+.icons .icon-14 {
+  background-image: url("../assets/icons/remove.svg"); }
+.icons .icon-15 {
+  background-image: url("../assets/icons/share.svg"); }
+.icons .icon-16 {
+  background-image: url("../assets/icons/trashcan.svg"); }
+.icons .icon-17 {
+  background-image: url("../assets/icons/upload.svg"); }
+.icons .icon-18 {
   background-image: url("../assets/icons/user.svg"); }
 
 /* xForm section - basic style */
